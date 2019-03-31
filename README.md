@@ -1,2 +1,4 @@
-# MDTSnackBar
-A implementation of a snack bar for iOS.
+# MDTSnackbar
+
+This project consists of an implementation of a Snackbar for iOS using only native components.
+
