@@ -19,6 +19,7 @@ class MDTSnackbar: UIView {
 
     //MARK: - Variables
     private var dismissTime: TimeInterval = 3.0
+    private var topLayoutConstraint: NSLayoutConstraint?
 
     //MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -27,9 +28,32 @@ class MDTSnackbar: UIView {
     
     init(cornerRadius: CGFloat, dismissTime: TimeInterval) {
         super.init(frame: CGRect.zero)
-        frame = generateRect(with: calculateSize(with: UIScreen.main.bounds.width))
-        self.dismissTime = dismissTime
+        UIApplication.shared.keyWindow?.addSubview(self)
+        translatesAutoresizingMaskIntoConstraints = false
         createLabelMessage()
+        configViewConstraints()
+        self.dismissTime = dismissTime
+    }
+    
+    private func configViewConstraints() {
+        guard let keyWindow = UIApplication.shared.keyWindow else { return }
+        createMarginConstraint(on: self,
+                               attribute: .left,
+                               to: keyWindow,
+                               constant: margin)
+        createMarginConstraint(on: self,
+                               attribute: .right,
+                               to: keyWindow,
+                               constant: -margin)
+        if #available(iOS 11, *) {
+            let guide = keyWindow.safeAreaLayoutGuide
+            topLayoutConstraint = self.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0)
+        } else {
+            topLayoutConstraint = self.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8.0)
+        }
+        topLayoutConstraint?.constant = -self.frame.size.height
+        guard let topConstraint = topLayoutConstraint else { return }
+        NSLayoutConstraint.activate([topConstraint])
     }
     
     private func createLabelMessage() {
@@ -98,21 +122,18 @@ class MDTSnackbar: UIView {
     }
     
     public func present() {
-        UIApplication.shared.keyWindow?.addSubview(self)
+        topLayoutConstraint?.constant = margin
         UIView.animate(withDuration: defaultAnimationTime, animations: {
-            self.frame.origin = CGPoint.init(x: self.margin,
-                                             y: self.margin)
+            self.layoutIfNeeded()
         }) { _ in
             self.scheduledHide()
         }
     }
 
     public func hide() {
-        UIView.animate(withDuration: defaultAnimationTime, animations: {
-            self.frame.origin = CGPoint(x: 0,
-                                        y: -self.frame.size.height)
-        }) { _ in
-            self.removeFromSuperview()
+        topLayoutConstraint?.constant = -self.frame.size.height
+        UIView.animate(withDuration: defaultAnimationTime) {
+            self.layoutIfNeeded()
         }
     }
 }
