@@ -18,13 +18,17 @@ class ViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         snackbar = MDTSnackbar(cornerRadius: 6.0, dismissTime: 3.0)
         snackbar?.style(backgroundColor: .red,
                         font: UIFont.systemFont(ofSize: 14),
                         textColor: .black)
         snackbar?.labelMessage?.text = "Test Message"
     }
-
+    
     //MARK: - IBActions
     @IBAction func actionShow(_ sender: UIButton) {
         snackbar?.present()

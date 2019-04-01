@@ -47,9 +47,9 @@ class MDTSnackbar: UIView {
                                constant: -margin)
         if #available(iOS 11, *) {
             let guide = keyWindow.safeAreaLayoutGuide
-            topLayoutConstraint = self.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0)
+            topLayoutConstraint = self.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0)
         } else {
-            topLayoutConstraint = self.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8.0)
+            topLayoutConstraint = self.topAnchor.constraint(equalTo: keyWindow.topAnchor, constant: 0.0)
         }
         topLayoutConstraint?.constant = -self.frame.size.height
         guard let topConstraint = topLayoutConstraint else { return }
