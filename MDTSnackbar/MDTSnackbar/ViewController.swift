@@ -9,12 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    //MARK: - IBOutlets
+    @IBOutlet weak var buttonShowSnackbar: UIButton!
 
+    //MARK: - Variables
+    var snackbar: MDTSnackbar?
+
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        snackbar = MDTSnackbar(cornerRadius: 6.0, dismissTime: 3.0)
+        snackbar?.style(backgroundColor: .red,
+                        font: UIFont.systemFont(ofSize: 14),
+                        textColor: .black)
+        snackbar?.labelMessage?.text = "Test Message"
     }
 
-
+    //MARK: - IBActions
+    @IBAction func actionShow(_ sender: UIButton) {
+        snackbar?.present()
+    }
 }
 

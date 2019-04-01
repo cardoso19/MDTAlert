@@ -13,6 +13,7 @@
 		AF0029B022517491004B0DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0029AF22517491004B0DB8 /* Assets.xcassets */; };
 		AF0029B322517491004B0DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0029B122517491004B0DB8 /* LaunchScreen.storyboard */; };
 		AF0029BE22517491004B0DB8 /* MDTSnackbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029BD22517491004B0DB8 /* MDTSnackbarTests.swift */; };
+		AF0029CA225175C9004B0DB8 /* MDTSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		AF0029B922517491004B0DB8 /* MDTSnackbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDTSnackbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0029BD22517491004B0DB8 /* MDTSnackbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTSnackbarTests.swift; sourceTree = "<group>"; };
 		AF0029BF22517491004B0DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MDTSnackbar.swift; path = ../../../../MDTSnackbar/MDTSnackbar/MDTSnackbar/SourceCode/MDTSnackbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		AF0029A72251748F004B0DB8 /* MDTSnackbar */ = {
 			isa = PBXGroup;
 			children = (
+				AF0029C822517587004B0DB8 /* SourceCode */,
 				AF0029A82251748F004B0DB8 /* AppDelegate.swift */,
 				AF0029AA2251748F004B0DB8 /* ViewController.swift */,
 				AF0029AC2251748F004B0DB8 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				AF0029BF22517491004B0DB8 /* Info.plist */,
 			);
 			path = MDTSnackbarTests;
+			sourceTree = "<group>";
+		};
+		AF0029C822517587004B0DB8 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */,
+			);
+			path = SourceCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0029CA225175C9004B0DB8 /* MDTSnackbar.swift in Sources */,
 				AF0029AB2251748F004B0DB8 /* ViewController.swift in Sources */,
 				AF0029A92251748F004B0DB8 /* AppDelegate.swift in Sources */,
 			);
@@ -361,8 +373,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75Q35KU859;
+				DEVELOPMENT_TEAM = DLCK7Y2P3N;
 				INFOPLIST_FILE = MDTSnackbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,8 +392,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75Q35KU859;
+				DEVELOPMENT_TEAM = DLCK7Y2P3N;
 				INFOPLIST_FILE = MDTSnackbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
