@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode10.2
+osx_image: xcode9.2
 xcode_project: MDTAlertExample/MDTAlertExample.xcodeproj
 xcode_scheme: MDTAlertExample
 xcode_sdk: iphonesimulator11.0
