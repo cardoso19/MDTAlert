@@ -1,15 +1,15 @@
 //
-//  MDTSnackbarTests.swift
-//  MDTSnackbarTests
+//  MDTAlertExampleTests.swift
+//  MDTAlertExampleTests
 //
-//  Created by Matheus Cardoso kuhn on 31/03/19.
+//  Created by Matheus Cardoso kuhn on 17/04/19.
 //  Copyright © 2019 MDT. All rights reserved.
 //
 
 import XCTest
-@testable import MDTSnackbar
+@testable import MDTAlertExample
 
-class MDTSnackbarTests: XCTestCase {
+class MDTAlertExampleTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

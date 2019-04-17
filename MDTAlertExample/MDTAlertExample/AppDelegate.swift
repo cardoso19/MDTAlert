@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MDTSnackbar
+//  MDTAlertExample
 //
-//  Created by Matheus Cardoso kuhn on 31/03/19.
+//  Created by Matheus Cardoso kuhn on 17/04/19.
 //  Copyright © 2019 MDT. All rights reserved.
 //
 

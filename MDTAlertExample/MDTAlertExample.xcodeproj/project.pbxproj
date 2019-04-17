@@ -7,48 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF0029A92251748F004B0DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029A82251748F004B0DB8 /* AppDelegate.swift */; };
-		AF0029AB2251748F004B0DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029AA2251748F004B0DB8 /* ViewController.swift */; };
-		AF0029AE2251748F004B0DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0029AC2251748F004B0DB8 /* Main.storyboard */; };
-		AF0029B022517491004B0DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0029AF22517491004B0DB8 /* Assets.xcassets */; };
-		AF0029B322517491004B0DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0029B122517491004B0DB8 /* LaunchScreen.storyboard */; };
-		AF0029BE22517491004B0DB8 /* MDTSnackbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029BD22517491004B0DB8 /* MDTSnackbarTests.swift */; };
-		AF0029CA225175C9004B0DB8 /* MDTSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */; };
+		AFB6F1162267510300312A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F1152267510300312A51 /* AppDelegate.swift */; };
+		AFB6F1182267510300312A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F1172267510300312A51 /* ViewController.swift */; };
+		AFB6F11B2267510300312A51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F1192267510300312A51 /* Main.storyboard */; };
+		AFB6F11D2267510500312A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11C2267510500312A51 /* Assets.xcassets */; };
+		AFB6F1202267510500312A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11E2267510500312A51 /* LaunchScreen.storyboard */; };
+		AFB6F12B2267510500312A51 /* MDTAlertExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */; };
+		AFB6F13E226752C600312A51 /* MDTAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F13C226752C600312A51 /* MDTAlertView.swift */; };
+		AFB6F13F226752C600312A51 /* MDTAlertViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF0029BA22517491004B0DB8 /* PBXContainerItemProxy */ = {
+		AFB6F1272267510500312A51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF00299D2251748F004B0DB8 /* Project object */;
+			containerPortal = AFB6F10A2267510300312A51 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF0029A42251748F004B0DB8;
-			remoteInfo = MDTSnackbar;
+			remoteGlobalIDString = AFB6F1112267510300312A51;
+			remoteInfo = MDTAlertExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AF0029A52251748F004B0DB8 /* MDTSnackbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDTSnackbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0029A82251748F004B0DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF0029AA2251748F004B0DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF0029AD2251748F004B0DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF0029AF22517491004B0DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF0029B222517491004B0DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AF0029B422517491004B0DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF0029B922517491004B0DB8 /* MDTSnackbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDTSnackbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0029BD22517491004B0DB8 /* MDTSnackbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTSnackbarTests.swift; sourceTree = "<group>"; };
-		AF0029BF22517491004B0DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MDTSnackbar.swift; path = ../../../../MDTSnackbar/MDTSnackbar/MDTSnackbar/SourceCode/MDTSnackbar.swift; sourceTree = "<group>"; };
+		AFB6F1122267510300312A51 /* MDTAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDTAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB6F1152267510300312A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFB6F1172267510300312A51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFB6F11A2267510300312A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFB6F11C2267510500312A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFB6F11F2267510500312A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFB6F1212267510500312A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB6F1262267510500312A51 /* MDTAlertExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDTAlertExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTAlertExampleTests.swift; sourceTree = "<group>"; };
+		AFB6F12C2267510500312A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB6F13C226752C600312A51 /* MDTAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertView.swift; sourceTree = "<group>"; };
+		AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF0029A22251748F004B0DB8 /* Frameworks */ = {
+		AFB6F10F2267510300312A51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0029B622517491004B0DB8 /* Frameworks */ = {
+		AFB6F1232267510500312A51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,51 +60,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF00299C2251748F004B0DB8 = {
+		AFB6F1092267510300312A51 = {
 			isa = PBXGroup;
 			children = (
-				AF0029A72251748F004B0DB8 /* MDTSnackbar */,
-				AF0029BC22517491004B0DB8 /* MDTSnackbarTests */,
-				AF0029A62251748F004B0DB8 /* Products */,
+				AFB6F1142267510300312A51 /* MDTAlertExample */,
+				AFB6F1292267510500312A51 /* MDTAlertExampleTests */,
+				AFB6F1132267510300312A51 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AF0029A62251748F004B0DB8 /* Products */ = {
+		AFB6F1132267510300312A51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF0029A52251748F004B0DB8 /* MDTSnackbar.app */,
-				AF0029B922517491004B0DB8 /* MDTSnackbarTests.xctest */,
+				AFB6F1122267510300312A51 /* MDTAlertExample.app */,
+				AFB6F1262267510500312A51 /* MDTAlertExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF0029A72251748F004B0DB8 /* MDTSnackbar */ = {
+		AFB6F1142267510300312A51 /* MDTAlertExample */ = {
 			isa = PBXGroup;
 			children = (
-				AF0029C822517587004B0DB8 /* SourceCode */,
-				AF0029A82251748F004B0DB8 /* AppDelegate.swift */,
-				AF0029AA2251748F004B0DB8 /* ViewController.swift */,
-				AF0029AC2251748F004B0DB8 /* Main.storyboard */,
-				AF0029AF22517491004B0DB8 /* Assets.xcassets */,
-				AF0029B122517491004B0DB8 /* LaunchScreen.storyboard */,
-				AF0029B422517491004B0DB8 /* Info.plist */,
+				AFB6F1152267510300312A51 /* AppDelegate.swift */,
+				AFB6F1352267510D00312A51 /* SourceCode */,
+				AFB6F1172267510300312A51 /* ViewController.swift */,
+				AFB6F1192267510300312A51 /* Main.storyboard */,
+				AFB6F11C2267510500312A51 /* Assets.xcassets */,
+				AFB6F11E2267510500312A51 /* LaunchScreen.storyboard */,
+				AFB6F1212267510500312A51 /* Info.plist */,
 			);
-			path = MDTSnackbar;
+			path = MDTAlertExample;
 			sourceTree = "<group>";
 		};
-		AF0029BC22517491004B0DB8 /* MDTSnackbarTests */ = {
+		AFB6F1292267510500312A51 /* MDTAlertExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF0029BD22517491004B0DB8 /* MDTSnackbarTests.swift */,
-				AF0029BF22517491004B0DB8 /* Info.plist */,
+				AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */,
+				AFB6F12C2267510500312A51 /* Info.plist */,
 			);
-			path = MDTSnackbarTests;
+			path = MDTAlertExampleTests;
 			sourceTree = "<group>";
 		};
-		AF0029C822517587004B0DB8 /* SourceCode */ = {
+		AFB6F1352267510D00312A51 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				AF0029C9225175C9004B0DB8 /* MDTSnackbar.swift */,
+				AFB6F13C226752C600312A51 /* MDTAlertView.swift */,
+				AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */,
 			);
 			path = SourceCode;
 			sourceTree = "<group>";
@@ -110,61 +113,61 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF0029A42251748F004B0DB8 /* MDTSnackbar */ = {
+		AFB6F1112267510300312A51 /* MDTAlertExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF0029C222517491004B0DB8 /* Build configuration list for PBXNativeTarget "MDTSnackbar" */;
+			buildConfigurationList = AFB6F12F2267510500312A51 /* Build configuration list for PBXNativeTarget "MDTAlertExample" */;
 			buildPhases = (
-				AF0029A12251748F004B0DB8 /* Sources */,
-				AF0029A22251748F004B0DB8 /* Frameworks */,
-				AF0029A32251748F004B0DB8 /* Resources */,
+				AFB6F10E2267510300312A51 /* Sources */,
+				AFB6F10F2267510300312A51 /* Frameworks */,
+				AFB6F1102267510300312A51 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MDTSnackbar;
-			productName = MDTSnackbar;
-			productReference = AF0029A52251748F004B0DB8 /* MDTSnackbar.app */;
+			name = MDTAlertExample;
+			productName = MDTAlertExample;
+			productReference = AFB6F1122267510300312A51 /* MDTAlertExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF0029B822517491004B0DB8 /* MDTSnackbarTests */ = {
+		AFB6F1252267510500312A51 /* MDTAlertExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF0029C522517491004B0DB8 /* Build configuration list for PBXNativeTarget "MDTSnackbarTests" */;
+			buildConfigurationList = AFB6F1322267510500312A51 /* Build configuration list for PBXNativeTarget "MDTAlertExampleTests" */;
 			buildPhases = (
-				AF0029B522517491004B0DB8 /* Sources */,
-				AF0029B622517491004B0DB8 /* Frameworks */,
-				AF0029B722517491004B0DB8 /* Resources */,
+				AFB6F1222267510500312A51 /* Sources */,
+				AFB6F1232267510500312A51 /* Frameworks */,
+				AFB6F1242267510500312A51 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF0029BB22517491004B0DB8 /* PBXTargetDependency */,
+				AFB6F1282267510500312A51 /* PBXTargetDependency */,
 			);
-			name = MDTSnackbarTests;
-			productName = MDTSnackbarTests;
-			productReference = AF0029B922517491004B0DB8 /* MDTSnackbarTests.xctest */;
+			name = MDTAlertExampleTests;
+			productName = MDTAlertExampleTests;
+			productReference = AFB6F1262267510500312A51 /* MDTAlertExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF00299D2251748F004B0DB8 /* Project object */ = {
+		AFB6F10A2267510300312A51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = MDT;
 				TargetAttributes = {
-					AF0029A42251748F004B0DB8 = {
+					AFB6F1112267510300312A51 = {
 						CreatedOnToolsVersion = 10.2;
 					};
-					AF0029B822517491004B0DB8 = {
+					AFB6F1252267510500312A51 = {
 						CreatedOnToolsVersion = 10.2;
-						TestTargetID = AF0029A42251748F004B0DB8;
+						TestTargetID = AFB6F1112267510300312A51;
 					};
 				};
 			};
-			buildConfigurationList = AF0029A02251748F004B0DB8 /* Build configuration list for PBXProject "MDTSnackbar" */;
+			buildConfigurationList = AFB6F10D2267510300312A51 /* Build configuration list for PBXProject "MDTAlertExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,29 +175,29 @@
 				en,
 				Base,
 			);
-			mainGroup = AF00299C2251748F004B0DB8;
-			productRefGroup = AF0029A62251748F004B0DB8 /* Products */;
+			mainGroup = AFB6F1092267510300312A51;
+			productRefGroup = AFB6F1132267510300312A51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF0029A42251748F004B0DB8 /* MDTSnackbar */,
-				AF0029B822517491004B0DB8 /* MDTSnackbarTests */,
+				AFB6F1112267510300312A51 /* MDTAlertExample */,
+				AFB6F1252267510500312A51 /* MDTAlertExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF0029A32251748F004B0DB8 /* Resources */ = {
+		AFB6F1102267510300312A51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0029B322517491004B0DB8 /* LaunchScreen.storyboard in Resources */,
-				AF0029B022517491004B0DB8 /* Assets.xcassets in Resources */,
-				AF0029AE2251748F004B0DB8 /* Main.storyboard in Resources */,
+				AFB6F1202267510500312A51 /* LaunchScreen.storyboard in Resources */,
+				AFB6F11D2267510500312A51 /* Assets.xcassets in Resources */,
+				AFB6F11B2267510300312A51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0029B722517491004B0DB8 /* Resources */ = {
+		AFB6F1242267510500312A51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,47 +207,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AF0029A12251748F004B0DB8 /* Sources */ = {
+		AFB6F10E2267510300312A51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0029CA225175C9004B0DB8 /* MDTSnackbar.swift in Sources */,
-				AF0029AB2251748F004B0DB8 /* ViewController.swift in Sources */,
-				AF0029A92251748F004B0DB8 /* AppDelegate.swift in Sources */,
+				AFB6F13E226752C600312A51 /* MDTAlertView.swift in Sources */,
+				AFB6F1182267510300312A51 /* ViewController.swift in Sources */,
+				AFB6F13F226752C600312A51 /* MDTAlertViewViewModel.swift in Sources */,
+				AFB6F1162267510300312A51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0029B522517491004B0DB8 /* Sources */ = {
+		AFB6F1222267510500312A51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0029BE22517491004B0DB8 /* MDTSnackbarTests.swift in Sources */,
+				AFB6F12B2267510500312A51 /* MDTAlertExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF0029BB22517491004B0DB8 /* PBXTargetDependency */ = {
+		AFB6F1282267510500312A51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF0029A42251748F004B0DB8 /* MDTSnackbar */;
-			targetProxy = AF0029BA22517491004B0DB8 /* PBXContainerItemProxy */;
+			target = AFB6F1112267510300312A51 /* MDTAlertExample */;
+			targetProxy = AFB6F1272267510500312A51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF0029AC2251748F004B0DB8 /* Main.storyboard */ = {
+		AFB6F1192267510300312A51 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF0029AD2251748F004B0DB8 /* Base */,
+				AFB6F11A2267510300312A51 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AF0029B122517491004B0DB8 /* LaunchScreen.storyboard */ = {
+		AFB6F11E2267510500312A51 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF0029B222517491004B0DB8 /* Base */,
+				AFB6F11F2267510500312A51 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -252,7 +256,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AF0029C022517491004B0DB8 /* Debug */ = {
+		AFB6F12D2267510500312A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -313,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		AF0029C122517491004B0DB8 /* Release */ = {
+		AFB6F12E2267510500312A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,117 +372,115 @@
 			};
 			name = Release;
 		};
-		AF0029C322517491004B0DB8 /* Debug */ = {
+		AFB6F1302267510500312A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLCK7Y2P3N;
-				INFOPLIST_FILE = MDTSnackbar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DEVELOPMENT_TEAM = 75Q35KU859;
+				INFOPLIST_FILE = MDTAlertExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTSnackbar;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AF0029C422517491004B0DB8 /* Release */ = {
+		AFB6F1312267510500312A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DLCK7Y2P3N;
-				INFOPLIST_FILE = MDTSnackbar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DEVELOPMENT_TEAM = 75Q35KU859;
+				INFOPLIST_FILE = MDTAlertExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTSnackbar;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		AF0029C622517491004B0DB8 /* Debug */ = {
+		AFB6F1332267510500312A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75Q35KU859;
-				INFOPLIST_FILE = MDTSnackbarTests/Info.plist;
+				INFOPLIST_FILE = MDTAlertExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTSnackbarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDTSnackbar.app/MDTSnackbar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDTAlertExample.app/MDTAlertExample";
 			};
 			name = Debug;
 		};
-		AF0029C722517491004B0DB8 /* Release */ = {
+		AFB6F1342267510500312A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75Q35KU859;
-				INFOPLIST_FILE = MDTSnackbarTests/Info.plist;
+				INFOPLIST_FILE = MDTAlertExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTSnackbarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDTSnackbar.app/MDTSnackbar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDTAlertExample.app/MDTAlertExample";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF0029A02251748F004B0DB8 /* Build configuration list for PBXProject "MDTSnackbar" */ = {
+		AFB6F10D2267510300312A51 /* Build configuration list for PBXProject "MDTAlertExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF0029C022517491004B0DB8 /* Debug */,
-				AF0029C122517491004B0DB8 /* Release */,
+				AFB6F12D2267510500312A51 /* Debug */,
+				AFB6F12E2267510500312A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF0029C222517491004B0DB8 /* Build configuration list for PBXNativeTarget "MDTSnackbar" */ = {
+		AFB6F12F2267510500312A51 /* Build configuration list for PBXNativeTarget "MDTAlertExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF0029C322517491004B0DB8 /* Debug */,
-				AF0029C422517491004B0DB8 /* Release */,
+				AFB6F1302267510500312A51 /* Debug */,
+				AFB6F1312267510500312A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF0029C522517491004B0DB8 /* Build configuration list for PBXNativeTarget "MDTSnackbarTests" */ = {
+		AFB6F1322267510500312A51 /* Build configuration list for PBXNativeTarget "MDTAlertExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF0029C622517491004B0DB8 /* Debug */,
-				AF0029C722517491004B0DB8 /* Release */,
+				AFB6F1332267510500312A51 /* Debug */,
+				AFB6F1342267510500312A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF00299D2251748F004B0DB8 /* Project object */;
+	rootObject = AFB6F10A2267510300312A51 /* Project object */;
 }

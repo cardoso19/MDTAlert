@@ -1,4 +1,4 @@
-# MDTSnackbar
+# MDTAlert
 
-This project consists of an implementation of a Snackbar for iOS using only native components.
+This project is a implementation of iOS alerts with constraints.
 
