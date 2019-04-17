@@ -1,2 +1,4 @@
-# MDTSnackBar
-A implementation of a snack bar for iOS.
+# MDTAlert
+
+This project is a implementation of iOS alerts with constraints.
+
