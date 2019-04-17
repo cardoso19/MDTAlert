@@ -1,5 +1,6 @@
+os: osx
+osx_image: xcode10.2
 language: swift
-osx_image: xcode9.2
 xcode_project: MDTAlertExample/MDTAlertExample.xcodeproj
 xcode_scheme: MDTAlertExample
-xcode_sdk: iphonesimulator11.0
+xcode_sdk: iphonesimulator12.2
