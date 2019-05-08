@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MDTAlertViewViewModel {
+internal class MDTAlertViewViewModel {
     
     //MARK: - Constants
     let margin: CGFloat = 10
