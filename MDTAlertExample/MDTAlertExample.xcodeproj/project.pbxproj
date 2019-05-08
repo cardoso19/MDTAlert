@@ -13,8 +13,8 @@
 		AFB6F11D2267510500312A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11C2267510500312A51 /* Assets.xcassets */; };
 		AFB6F1202267510500312A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11E2267510500312A51 /* LaunchScreen.storyboard */; };
 		AFB6F12B2267510500312A51 /* MDTAlertExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */; };
-		AFB6F13E226752C600312A51 /* MDTAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F13C226752C600312A51 /* MDTAlertView.swift */; };
-		AFB6F13F226752C600312A51 /* MDTAlertViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */; };
+		C587AE73228352D8005223A5 /* MDTAlertViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */; };
+		C587AE74228352D8005223A5 /* MDTAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C587AE72228352D8005223A5 /* MDTAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 		AFB6F1262267510500312A51 /* MDTAlertExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDTAlertExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTAlertExampleTests.swift; sourceTree = "<group>"; };
 		AFB6F12C2267510500312A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFB6F13C226752C600312A51 /* MDTAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertView.swift; sourceTree = "<group>"; };
-		AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertViewViewModel.swift; sourceTree = "<group>"; };
+		C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDTAlertViewViewModel.swift; path = ../../../SourceCode/MDTAlertViewViewModel.swift; sourceTree = "<group>"; };
+		C587AE72228352D8005223A5 /* MDTAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDTAlertView.swift; path = ../../../SourceCode/MDTAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		AFB6F1352267510D00312A51 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				AFB6F13C226752C600312A51 /* MDTAlertView.swift */,
-				AFB6F13D226752C600312A51 /* MDTAlertViewViewModel.swift */,
+				C587AE72228352D8005223A5 /* MDTAlertView.swift */,
+				C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */,
 			);
 			path = SourceCode;
 			sourceTree = "<group>";
@@ -211,9 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB6F13E226752C600312A51 /* MDTAlertView.swift in Sources */,
 				AFB6F1182267510300312A51 /* ViewController.swift in Sources */,
-				AFB6F13F226752C600312A51 /* MDTAlertViewViewModel.swift in Sources */,
+				C587AE74228352D8005223A5 /* MDTAlertView.swift in Sources */,
+				C587AE73228352D8005223A5 /* MDTAlertViewViewModel.swift in Sources */,
 				AFB6F1162267510300312A51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,13 +377,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75Q35KU859;
+				DEVELOPMENT_TEAM = Q7836M9296;
 				INFOPLIST_FILE = MDTAlertExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExample;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,13 +396,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75Q35KU859;
+				DEVELOPMENT_TEAM = Q7836M9296;
 				INFOPLIST_FILE = MDTAlertExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlertExample;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdt.MDTAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -21,10 +21,9 @@ class ViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func actionShowAlertTop(_ sender: UIButton) {
-        let alertView = MDTAlertView(cornerRadius: 6.0,
-                                     dismissTime: 3.0,
-                                     message: "This is a test message of the alert on the top of the screen",
-                                     position: .top)
+        let alertView = MDTAlertView(message: "This is a test message of the alert on the top of the screen",
+                                     position: .top,
+                                     dismissTime: 3.0)
         alertView.style(backgroundColor: .red,
                         font: UIFont.systemFont(ofSize: 16),
                         textColor: .white)
@@ -32,10 +31,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionShowAlertBottom(_ sender: UIButton) {
-        let alertView = MDTAlertView(cornerRadius: 6.0,
-                                     dismissTime: 3.0,
-                                     message: "This is a test message of the alert on the bottom of the screen",
-                                     position: .bottom)
+        let alertView = MDTAlertView(message: "This is a test message of the alert on the bottom of the screen",
+                                     position: .bottom,
+                                     dismissTime: 3.0)
         alertView.style(backgroundColor: .black,
                         font: UIFont.systemFont(ofSize: 22),
                         textColor: .white)

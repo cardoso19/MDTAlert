@@ -28,13 +28,13 @@ class MDTAlertView: UIView {
         fatalError("This was not implemented")
     }
     
-    init(cornerRadius radius: CGFloat, dismissTime: TimeInterval, message: String, position: AlertPosition) {
+    init(message: String, position: AlertPosition, dismissTime: TimeInterval) {
         super.init(frame: CGRect.zero)
         viewModel = MDTAlertViewViewModel(dismissTime: dismissTime, alertPosition: position)
         frame = viewModel.generateRect(withWidth: UIScreen.main.bounds.width)
         translatesAutoresizingMaskIntoConstraints = false
         createLabelMessage(with: message)
-        configCorners(with: radius)
+        configCorners(with: 6.0)
         configGestureRecognizer()
     }
     
@@ -42,6 +42,7 @@ class MDTAlertView: UIView {
         labelMessage = UILabel()
         labelMessage.text = message
         labelMessage.translatesAutoresizingMaskIntoConstraints = false
+        labelMessage.numberOfLines = 0
         addSubview(labelMessage)
         configConstraints(of: labelMessage)
         configLabelCompressResistence()
@@ -54,7 +55,7 @@ class MDTAlertView: UIView {
     
     private func configGestureRecognizer() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hide))
-        self.addGestureRecognizer(tapRecognizer)
+        addGestureRecognizer(tapRecognizer)
     }
     
     private func configLabelCompressResistence() {
@@ -79,19 +80,19 @@ class MDTAlertView: UIView {
             let guide = view.safeAreaLayoutGuide
             switch viewModel.alertPosition {
             case .top:
-                horizontalConstraint = self.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0)
+                horizontalConstraint = topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0)
             case .bottom:
-                horizontalConstraint = self.bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 1.0)
+                horizontalConstraint = bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 1.0)
             }
         } else {
             switch viewModel.alertPosition {
             case .top:
-                horizontalConstraint = self.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0)
+                horizontalConstraint = topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0)
             case .bottom:
-                horizontalConstraint = self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
+                horizontalConstraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
             }
         }
-        horizontalConstraint?.constant = viewModel.calculateOutScreenPosition(withHeight: self.bounds.size.height)
+        horizontalConstraint?.constant = viewModel.calculateOutScreenPosition(withHeight: bounds.size.height)
         if let topConstraint = horizontalConstraint {
             NSLayoutConstraint.activate([topConstraint])
         }
