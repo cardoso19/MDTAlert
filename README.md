@@ -1,5 +1,6 @@
 # MDTAlert
-[![Build Status](https://travis-ci.org/cardoso19/MDTAlert.svg?branch=master)](https://travis-ci.org/cardoso19/MDTAlert) [![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)](https://github.com/cardoso19/MDTAlert) [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org) [![Xcode](https://img.shields.io/badge/Xcode-10.2.1-blue.svg)](https://developer.apple.com/xcode) [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+
+[![Build Status](https://travis-ci.org/cardoso19/MDTAlert.svg?branch=master)](https://travis-ci.org/cardoso19/MDTAlert) [![pod](https://img.shields.io/cocoapods/v/MDTAlert.svg)](https://github.com/cardoso19/MDTAlert) [![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)](https://github.com/cardoso19/MDTAlert) [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org) [![Xcode](https://img.shields.io/badge/Xcode-10.2.1-blue.svg)](https://developer.apple.com/xcode) [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 MDTAlert is a swift framework to show alerts on iOS. All of the alerts are created using constraints so it's redmensionable when screen rotates.
 
@@ -13,6 +14,16 @@ MDTAlert is a swift framework to show alerts on iOS. All of the alerts are creat
 
 - [x] Simple visual of alerts using constraints.
 - [x] Alerts on top and bottom of screen.
+
+## Installation
+
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate MDTAlert into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+pod 'MDTAlert'
+```
 
 ## Usage
 
