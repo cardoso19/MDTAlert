@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MDTAlertView: UIView {
+public class MDTAlertView: UIView {
 
     //MARK: - AlertPostion
-    enum AlertPosition {
+    public enum AlertPosition {
         case top
         case bottom
     }

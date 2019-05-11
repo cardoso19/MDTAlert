@@ -30,6 +30,8 @@ pod 'MDTAlert'
 This is an example of how to show an alert using the framework.
 
 ```swift
+import MDTAlert
+
 let alertView = MDTAlertView(message: "This is a test message of the alert on the top of the screen",
                                      position: .top,
                                      dismissTime: 3.0)

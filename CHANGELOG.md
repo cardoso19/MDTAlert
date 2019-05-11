@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2019-05-11
+### Fixed
+- Access control on MDTAlertView and AlertPosition set to public.
+
 ## [1.0.1] - 2019-05-08
 ### Changed
 - Initializer of the alert changed to not receive corner radius.
@@ -20,5 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support to bottom position of alert.
 
 [Unreleased]: https://github.com/cardoso19/MDTAlert
+[1.0.2]: https://github.com/cardoso19/MDTAlert/releases/tag/v1.0.2
 [1.0.1]: https://github.com/cardoso19/MDTAlert/releases/tag/v1.0.1
 [1.0.0]: https://github.com/cardoso19/MDTAlert/releases/tag/v1.0.0

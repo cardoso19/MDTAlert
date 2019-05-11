@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MDTAlert"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "MDTAlert is a swift framework to show alerts on iOS."
   s.homepage     = "https://github.com/cardoso19/MDTAlert"
 
