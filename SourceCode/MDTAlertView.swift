@@ -28,7 +28,7 @@ public class MDTAlertView: UIView {
         fatalError("This was not implemented")
     }
     
-    init(message: String, position: AlertPosition, dismissTime: TimeInterval) {
+    public init(message: String, position: AlertPosition, dismissTime: TimeInterval) {
         super.init(frame: CGRect.zero)
         viewModel = MDTAlertViewViewModel(dismissTime: dismissTime, alertPosition: position)
         frame = viewModel.generateRect(withWidth: UIScreen.main.bounds.width)
