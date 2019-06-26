@@ -13,7 +13,7 @@ MDTAlert is a swift framework to show alerts on iOS. All of the alerts are creat
 ## Features
 
 - [x] Simple visual of alerts using constraints.
-- [x] Alerts on top and bottom of screen.
+- [x] Alerts on the top and bottom of the screen.
 
 ## Installation
 
