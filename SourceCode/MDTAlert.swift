@@ -17,11 +17,11 @@ public protocol MDTAlerting: UIView {
     func hide(animated: Bool)
 }
 
-public final class MDTAlert {
+open class MDTAlert {
     private init() {}
     
     @discardableResult
-    public static func showAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
+    open class func showAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
         view.setText(message)
         view.present(animated: animated)
@@ -29,20 +29,20 @@ public final class MDTAlert {
     }
     
     @discardableResult
-    public static func showAlert(attributedText: NSAttributedString, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
+    open class func showAlert(attributedText: NSAttributedString, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
         view.setAttributedText(attributedText)
         view.present(animated: animated)
         return view
     }
     
-    public static func createAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
+    open class func createAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
         view.setText(message)
         return view
     }
     
-    public static func createAlert(attributedText: NSAttributedString, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
+    open class func createAlert(attributedText: NSAttributedString, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
         view.setAttributedText(attributedText)
         return view
