@@ -21,9 +21,9 @@ open class MDTAlert {
     private init() {}
     
     @discardableResult
-    open class func showAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
+    open class func showAlert(text: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow, animated: Bool = true) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
-        view.setText(message)
+        view.setText(text)
         view.present(animated: animated)
         return view
     }
@@ -36,9 +36,9 @@ open class MDTAlert {
         return view
     }
     
-    open class func createAlert(message: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
+    open class func createAlert(text: String, position: AlertPosition = .top, dismissTime: TimeInterval = 3, parentView: UIView? = UIApplication.shared.keyWindow) -> MDTAlerting {
         let view = alertConstructor(position: position, dismissTime: dismissTime, parentView: parentView)
-        view.setText(message)
+        view.setText(text)
         return view
     }
     
