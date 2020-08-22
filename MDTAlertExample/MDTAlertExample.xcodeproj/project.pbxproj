@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA60F9F24F18F18005068A5 /* MDTAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60F9D24F18F18005068A5 /* MDTAlertView.swift */; };
+		2FA60FA024F18F18005068A5 /* MDTAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60F9E24F18F18005068A5 /* MDTAlertViewModel.swift */; };
+		2FA60FA224F191A0005068A5 /* MDTAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60FA124F191A0005068A5 /* MDTAlert.swift */; };
+		2FA60FA424F1922D005068A5 /* AlertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60FA324F1922D005068A5 /* AlertPosition.swift */; };
+		2FA60FC524F19BB6005068A5 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60FC424F19BB6005068A5 /* LayoutGuide.swift */; };
+		2FA60FC824F19C51005068A5 /* UIView+LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA60FC724F19C51005068A5 /* UIView+LayoutGuide.swift */; };
 		AFB6F1162267510300312A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F1152267510300312A51 /* AppDelegate.swift */; };
 		AFB6F1182267510300312A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F1172267510300312A51 /* ViewController.swift */; };
 		AFB6F11B2267510300312A51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F1192267510300312A51 /* Main.storyboard */; };
 		AFB6F11D2267510500312A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11C2267510500312A51 /* Assets.xcassets */; };
 		AFB6F1202267510500312A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F11E2267510500312A51 /* LaunchScreen.storyboard */; };
 		AFB6F12B2267510500312A51 /* MDTAlertExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */; };
-		C587AE73228352D8005223A5 /* MDTAlertViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */; };
-		C587AE74228352D8005223A5 /* MDTAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C587AE72228352D8005223A5 /* MDTAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FA60F9D24F18F18005068A5 /* MDTAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertView.swift; sourceTree = "<group>"; };
+		2FA60F9E24F18F18005068A5 /* MDTAlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTAlertViewModel.swift; sourceTree = "<group>"; };
+		2FA60FA124F191A0005068A5 /* MDTAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTAlert.swift; sourceTree = "<group>"; };
+		2FA60FA324F1922D005068A5 /* AlertPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPosition.swift; sourceTree = "<group>"; };
+		2FA60FC424F19BB6005068A5 /* LayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuide.swift; sourceTree = "<group>"; };
+		2FA60FC724F19C51005068A5 /* UIView+LayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutGuide.swift"; sourceTree = "<group>"; };
 		AFB6F1122267510300312A51 /* MDTAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDTAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6F1152267510300312A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB6F1172267510300312A51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +48,6 @@
 		AFB6F1262267510500312A51 /* MDTAlertExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDTAlertExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6F12A2267510500312A51 /* MDTAlertExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTAlertExampleTests.swift; sourceTree = "<group>"; };
 		AFB6F12C2267510500312A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDTAlertViewViewModel.swift; path = ../../../SourceCode/MDTAlertViewViewModel.swift; sourceTree = "<group>"; };
-		C587AE72228352D8005223A5 /* MDTAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MDTAlertView.swift; path = ../../../SourceCode/MDTAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA60F9C24F18F18005068A5 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				2FA60FA124F191A0005068A5 /* MDTAlert.swift */,
+				2FA60F9D24F18F18005068A5 /* MDTAlertView.swift */,
+				2FA60F9E24F18F18005068A5 /* MDTAlertViewModel.swift */,
+				2FA60FA324F1922D005068A5 /* AlertPosition.swift */,
+				2FA60FC624F19C2C005068A5 /* Utils */,
+			);
+			name = SourceCode;
+			path = ../../SourceCode;
+			sourceTree = "<group>";
+		};
+		2FA60FC624F19C2C005068A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2FA60FC424F19BB6005068A5 /* LayoutGuide.swift */,
+				2FA60FC724F19C51005068A5 /* UIView+LayoutGuide.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AFB6F1092267510300312A51 = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +111,8 @@
 		AFB6F1142267510300312A51 /* MDTAlertExample */ = {
 			isa = PBXGroup;
 			children = (
+				2FA60F9C24F18F18005068A5 /* SourceCode */,
 				AFB6F1152267510300312A51 /* AppDelegate.swift */,
-				AFB6F1352267510D00312A51 /* SourceCode */,
 				AFB6F1172267510300312A51 /* ViewController.swift */,
 				AFB6F1192267510300312A51 /* Main.storyboard */,
 				AFB6F11C2267510500312A51 /* Assets.xcassets */,
@@ -99,15 +129,6 @@
 				AFB6F12C2267510500312A51 /* Info.plist */,
 			);
 			path = MDTAlertExampleTests;
-			sourceTree = "<group>";
-		};
-		AFB6F1352267510D00312A51 /* SourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				C587AE72228352D8005223A5 /* MDTAlertView.swift */,
-				C587AE71228352D8005223A5 /* MDTAlertViewViewModel.swift */,
-			);
-			path = SourceCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA60F9F24F18F18005068A5 /* MDTAlertView.swift in Sources */,
+				2FA60FA424F1922D005068A5 /* AlertPosition.swift in Sources */,
+				2FA60FC524F19BB6005068A5 /* LayoutGuide.swift in Sources */,
+				2FA60FC824F19C51005068A5 /* UIView+LayoutGuide.swift in Sources */,
+				2FA60FA224F191A0005068A5 /* MDTAlert.swift in Sources */,
 				AFB6F1182267510300312A51 /* ViewController.swift in Sources */,
-				C587AE74228352D8005223A5 /* MDTAlertView.swift in Sources */,
-				C587AE73228352D8005223A5 /* MDTAlertViewViewModel.swift in Sources */,
+				2FA60FA024F18F18005068A5 /* MDTAlertViewModel.swift in Sources */,
 				AFB6F1162267510300312A51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

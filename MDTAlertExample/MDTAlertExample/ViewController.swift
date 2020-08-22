@@ -8,36 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+final class ViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     //MARK: - IBActions
     @IBAction func actionShowAlertTop(_ sender: UIButton) {
-        let alertView = MDTAlertView(message: "This is a test message of the alert on the top of the screen",
-                                     position: .top,
-                                     dismissTime: 3.0)
-        alertView.style(backgroundColor: .red,
-                        font: UIFont.systemFont(ofSize: 16),
-                        textColor: .white)
-        alertView.present()
+        let message = "This is a test message of the alert on the top of the screen"
+        let alert = MDTAlert.createAlert(message: message, position: .top)
+        alert.backgroundColor = .black
+        alert.setStyle(textColor: .white, font: UIFont.systemFont(ofSize: 22), textAligment: .center)
+        alert.present(animated: true)
     }
     
     @IBAction func actionShowAlertBottom(_ sender: UIButton) {
-        let alertView = MDTAlertView(message: "This is a test message of the alert on the bottom of the screen",
-                                     position: .bottom,
-                                     dismissTime: 3.0)
-        alertView.style(backgroundColor: .black,
-                        font: UIFont.systemFont(ofSize: 22),
-                        textColor: .white)
-        alertView.present()
+        let message = "This is a test message of the alert on the bottom of the screen"
+        let alert = MDTAlert.createAlert(message: message, position: .bottom)
+        alert.backgroundColor = .black
+        alert.setStyle(textColor: .white, font: UIFont.systemFont(ofSize: 22), textAligment: .center)
+        alert.present(animated: true)
     }
 }
 
