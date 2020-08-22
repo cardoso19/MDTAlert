@@ -58,7 +58,7 @@ public enum AlertPosition {
     }
     
     private func createHorizontalConstraints(alert: UIView, parentView: UIView, margin: CGFloat) -> [NSLayoutConstraint] {
-        [
+        return [
             alert.safeLayoutGuide.leadingAnchor.constraint(equalTo: parentView.safeLayoutGuide.leadingAnchor, constant: margin),
             alert.safeLayoutGuide.trailingAnchor.constraint(equalTo: parentView.safeLayoutGuide.trailingAnchor, constant: -margin)
         ]
