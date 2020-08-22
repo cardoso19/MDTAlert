@@ -8,158 +8,154 @@
 
 import UIKit
 
-public class MDTAlertView: UIView {
-
-    //MARK: - AlertPostion
-    public enum AlertPosition {
-        case top
-        case bottom
-    }
+private enum Layout {
+    static let margin: CGFloat = 10
     
+    enum Size {
+        static let cornerRadius: CGFloat = 6
+        static let minHeight: CGFloat = 44
+    }
+}
+
+final class MDTAlertView: UIView {
     //MARK: - Visual Components
-    private var labelMessage: UILabel!
+    private let labelMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        return label
+    }()
 
     //MARK: - Variables
-    private var viewModel: MDTAlertViewViewModel!
-    private var horizontalConstraint: NSLayoutConstraint?
+    private let viewModel: MDTAlertViewModeling
+    private let alertPosition: AlertPosition
+    private var verticalConstraint: NSLayoutConstraint?
+    private weak var parentView: UIView?
+    public var isHideAnimated: Bool = true
 
-    //MARK: - Init
+    //MARK: - Life Cycle
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("This was not implemented")
     }
     
-    public init(message: String, position: AlertPosition, dismissTime: TimeInterval) {
-        super.init(frame: CGRect.zero)
-        viewModel = MDTAlertViewViewModel(dismissTime: dismissTime, alertPosition: position)
-        frame = viewModel.generateRect(withWidth: UIScreen.main.bounds.width)
+    init(viewModel: MDTAlertViewModeling, alertPosition: AlertPosition, parentView: UIView?) {
+        self.viewModel = viewModel
+        self.alertPosition = alertPosition
+        self.parentView = parentView
+        super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        createLabelMessage(with: message)
-        configCorners(with: 6.0)
-        configGestureRecognizer()
+        buildLayout()
     }
     
-    private func createLabelMessage(with message: String) {
-        labelMessage = UILabel()
-        labelMessage.text = message
-        labelMessage.translatesAutoresizingMaskIntoConstraints = false
-        labelMessage.numberOfLines = 0
+    private func buildLayout() {
+        buildViewHierarchy()
+        setupConstraints()
+        configureViews()
+    }
+    
+    private func buildViewHierarchy() {
         addSubview(labelMessage)
-        configConstraints(of: labelMessage)
-        configLabelCompressResistence()
     }
     
-    private func configCorners(with cornerRadius: CGFloat) {
-        layer.cornerRadius = cornerRadius
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            labelMessage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Layout.margin),
+            labelMessage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Layout.margin),
+            labelMessage.topAnchor.constraint(equalTo: topAnchor, constant: Layout.margin),
+            labelMessage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Layout.margin)
+        ])
+        
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(greaterThanOrEqualToConstant: Layout.Size.minHeight)
+        ])
+    }
+    
+    private func setupConstraintsToParentView() {
+        guard let parentView = parentView else {
+            return
+        }
+        parentView.addSubview(self)
+        let alertConstraints = alertPosition.createConstraints(alert: self, parentView: parentView, margin: Layout.margin)
+        NSLayoutConstraint.activate(alertConstraints.constraints)
+        UIApplication.shared.keyWindow?.layoutIfNeeded()
+        verticalConstraint = alertConstraints.verticalConstraint
+    }
+    
+    private func configureViews() {
+        configGestureRecognizer()
+        layer.cornerRadius = Layout.Size.cornerRadius
         clipsToBounds = true
     }
     
     private func configGestureRecognizer() {
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hide))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
         addGestureRecognizer(tapRecognizer)
     }
     
-    private func configLabelCompressResistence() {
-        labelMessage.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+    @objc
+    private func tapGesture() {
+        hide(animated: isHideAnimated)
     }
     
-    //MARK: - Constraints
-    private func configViewConstraints(onView view: UIView) {
-        createMarginConstraint(on: self,
-                               attribute: .left,
-                               to: view,
-                               constant: viewModel.margin)
-        createMarginConstraint(on: self,
-                               attribute: .right,
-                               to: view,
-                               constant: -viewModel.margin)
-        configViewVerticalConstraint(onView: view)
-    }
-    
-    private func configViewVerticalConstraint(onView view: UIView) {
-        if #available(iOS 11, *) {
-            let guide = view.safeAreaLayoutGuide
-            switch viewModel.alertPosition {
-            case .top:
-                horizontalConstraint = topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0)
-            case .bottom:
-                horizontalConstraint = bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 1.0)
-            }
+    private func getParentViewEdgeInsets() -> UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return parentView?.safeAreaInsets ?? .zero
         } else {
-            switch viewModel.alertPosition {
-            case .top:
-                horizontalConstraint = topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0)
-            case .bottom:
-                horizontalConstraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
-            }
+            return .zero
         }
-        horizontalConstraint?.constant = viewModel.calculateOutScreenPosition(withHeight: bounds.size.height)
-        if let topConstraint = horizontalConstraint {
-            NSLayoutConstraint.activate([topConstraint])
-        }
-    }
-
-    private func configConstraints(of label: UILabel) {
-        createMarginConstraint(on: label,
-                               attribute: .left,
-                               to: self,
-                               constant: viewModel.contentMargin)
-        createMarginConstraint(on: label,
-                               attribute: .right,
-                               to: self,
-                               constant: -viewModel.contentMargin)
-        createMarginConstraint(on: label,
-                               attribute: .top,
-                               to: self,
-                               constant: viewModel.contentMargin)
-        createMarginConstraint(on: label,
-                               attribute: .bottom,
-                               to: self,
-                               constant: -viewModel.contentMargin)
     }
     
-    private func createMarginConstraint(on item: Any, attribute: NSLayoutConstraint.Attribute, to item2: Any, constant: CGFloat) {
-        NSLayoutConstraint(item: item,
-                           attribute: attribute,
-                           relatedBy: .equal,
-                           toItem: item2,
-                           attribute: attribute,
-                           multiplier: 1,
-                           constant: constant).isActive = true
-    }
-
-    //MARK: - Presentation Controls
-    private func scheduledHide() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + viewModel.dismissTime) { [weak self] in
-            self?.hide()
+    private func scheduleTimer(animated: Bool) {
+        viewModel.scheduleTimer { [weak self] in
+            self?.hide(animated: animated)
         }
     }
+}
 
-    public func style(backgroundColor color: UIColor, font: UIFont, textColor: UIColor) {
-        backgroundColor = color
-        labelMessage.font = font
+// MARK: - MDTAlerting
+extension MDTAlertView: MDTAlerting {
+    public func setText(_ text: String) {
+        labelMessage.text = text
+    }
+    
+    public func setStyle(textColor: UIColor, font: UIFont, textAligment: NSTextAlignment) {
         labelMessage.textColor = textColor
+        labelMessage.font = font
+        labelMessage.textAlignment = textAligment
     }
     
-    public func present() {
-        UIApplication.shared.keyWindow?.addSubview(self)
-        if let keyWindow = UIApplication.shared.keyWindow {
-            configViewConstraints(onView: keyWindow)
-        }
-        UIApplication.shared.keyWindow?.layoutIfNeeded()
-        horizontalConstraint?.constant = viewModel.calculateInScreenPosition()
-        UIView.animate(withDuration: viewModel.defaultAnimationTime, animations: {
-            UIApplication.shared.keyWindow?.layoutIfNeeded()
-        }) { [weak self] _ in
-            self?.scheduledHide()
+    public func setAttributedText(_ attributedText: NSAttributedString) {
+        labelMessage.attributedText = attributedText
+    }
+    
+    public func present(animated: Bool) {
+        setupConstraintsToParentView()
+        verticalConstraint?.constant = alertPosition.outScreenValue(alertFrame: frame, edgeInsets: getParentViewEdgeInsets())
+        parentView?.layoutIfNeeded()
+        verticalConstraint?.constant = alertPosition.inScreenValue(margin: Layout.margin)
+        if animated {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.parentView?.layoutIfNeeded()
+            }, completion: { _ in
+                self.scheduleTimer(animated: animated)
+            })
+        } else {
+            parentView?.layoutIfNeeded()
         }
     }
 
-    @objc public func hide() {
-        horizontalConstraint?.constant = viewModel.calculateOutScreenPosition(withHeight: self.bounds.size.height)
-        UIView.animate(withDuration: viewModel.defaultAnimationTime, animations: {
-            UIApplication.shared.keyWindow?.layoutIfNeeded()
-        }) { [weak self] _ in
-            self?.removeFromSuperview()
+    public func hide(animated: Bool) {
+        verticalConstraint?.constant = alertPosition.outScreenValue(alertFrame: frame, edgeInsets: getParentViewEdgeInsets())
+        if animated {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.parentView?.layoutIfNeeded()
+            }, completion: { _ in
+                self.removeFromSuperview()
+            })
+        } else {
+            removeFromSuperview()
         }
     }
 }
