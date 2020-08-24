@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MDTAlert"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "MDTAlert is a swift framework to show alerts on iOS."
   s.homepage     = "https://github.com/cardoso19/MDTAlert"
 
@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/cardoso19/MDTAlert.git", :tag => "v#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "SourceCode/*.swift"
+  s.source_files  = "SourceCode/**/*.swift"
 
 end
